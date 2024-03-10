@@ -1,0 +1,54 @@
+[
+    {
+        "sentence_id": 1, 
+        "sentence": "كيف ساهمت السياسة الأميركية", 
+        "words": [
+            {"word_id": 1, "word": "كيف", "target_sense": 302049031},
+            {"word_id": 2, "word": "ساهمت", "target_sense": 302032066},            
+            {"word_id": 3, "word": "السياسة", "target_sense": 303027139},
+            {"word_id": 4, "word": "الأميركية", "target_sense": 302004373}
+            ]
+    }, 
+
+    {
+        "sentence_id": 2, "sentence": "المستندة إلى رؤية سعودية", 
+        "words": [
+            {"word_id": 1, "word": "المستندة", "target_sense": 302053377}, 
+            {"word_id": 2, "word": "إلى", "target_sense": 303002297}, 
+            {"word_id": 3, "word": "رؤية", "target_sense": 302028124}, 
+            {"word_id": 4, "word": "سعودية", "target_sense": 302032971}
+        ]
+    },
+
+    {
+        "sentence_id": 3, "sentence": "سوء فهم أمريكا لليمن", 
+        "words": [ 
+            {"word_id": 1, "word": "سوء", "target_sense": 302033923}, 
+            {"word_id": 2, "word": "فهم", "target_sense": 302045176}, 
+            {"word_id": 3, "word": "أمريكا", "target_sense": 2023227683}, 
+            {"word_id": 4, "word": "لليمن", "target_sense": 302064473}
+        ]
+    },
+
+    {
+        "sentence_id": 4, 
+        "sentence": "\" حرب السعودية في اليمن ", 
+        "words": [
+            {"word_id": 1, "word": "حرب", "target_sense": 302021776}, 
+            {"word_id": 2, "word": "السعودية", "target_sense": 302032971}, 
+            {"word_id": 3, "word": "في", "target_sense": 302045253}, 
+            {"word_id": 4, "word": "اليمن", "target_sense": 302064473}
+        ]
+    },
+
+    {
+        "sentence_id": 5, 
+        "sentence": "\" ليست قادرة على الاستمرار", 
+        "words": [
+            {"word_id": 1, "word": "ليست", "target_sense": 302050246}, 
+            {"word_id": 2, "word": "قادرة", "target_sense": 302045389}, 
+            {"word_id": 3, "word": "على", "target_sense": 302041708}, 
+            {"word_id": 4, "word": "الاستمرار", "target_sense": 302007573}
+            ]
+        }
+]
