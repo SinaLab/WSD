@@ -134,8 +134,8 @@ def GlossPredictor(target, example, glosses):
     return 'none','none'
 
 
-filePath = './ArabGlossBERT/examples.json'
-glossesDict= "./ArabGlossBERT/dictionary.json"
+filePath = 'WSD_Accuracy/Data/Test.json' #'./ArabGlossBERT/examples.json'
+glossesDict= "WSD_Accuracy/Data/dictionary.json" #"./ArabGlossBERT/dictionary.json"
 glossesDictContent = {}
 with open(filePath, 'r', encoding='utf-8') as file:
    fileContent = file.read()
@@ -148,7 +148,7 @@ for glossesDictValue in glossesDictValues:
 
 # Load the JSON data
 sentencesInfo = json.loads(fileContent)
-
+print(sentencesInfo)
     
 targetWord = ""
 glossesIds = [] 
@@ -159,7 +159,7 @@ def WSDdisambiguation(inputSentence, inputWord):
      sentence = sentenceInfo["sentence"]
      if sentence == inputSentence: 
         for w in sentenceInfo["words"]:
-            if inputWord == w["word"]: 
+            if inputWord == w["word"]:
                targetWord = w["word"]
                glossesIds = w["senses"]
         for glossId in glossesIds: 
@@ -167,7 +167,7 @@ def WSDdisambiguation(inputSentence, inputWord):
                glossesDictionary[glossId] = glossesDictContent[glossId]
         conceptId, gloss = GlossPredictor(targetWord, sentence, glossesDictionary)
         return conceptId, gloss
-     return 0, "Enter the valid sentence"
+   return 0, "Enter the valid sentence"
 
 
 
@@ -195,5 +195,34 @@ def WSD(sentence, targetWord):
         i = i + 1
         outputList.append(sentenceJson)
         return outputList
+
+
+def WSD_Evaluation(sentences_json_path, output_json_path):
+    outputList = []  
+    with open(sentences_json_path, 'r', encoding='utf-8') as file:
+        sentences = json.load(file)
+        for sentence in sentences:
+            wordsJson = []
+            for word in sentence['words']:
+                conceptId, gloss = WSDdisambiguation(sentence['sentence'], word['word'])
+                wordsJson.append({
+                    "word_id": word['word_id'],
+                    "word": word['word'],
+                    "target_sense": conceptId  # Assuming only one sense for simplicity
+                })
+            
+            sentenceJson = {
+                "sentence_id": sentence['sentence_id'],
+                "sentence": sentence['sentence'],
+                "words": wordsJson
+            }
+            outputList.append(sentenceJson)
+            
+    with open(output_json_path, 'w', encoding='utf-8') as outfile:
+        json.dump(outputList, outfile,ensure_ascii=False, indent=4)
+
+    print("Output JSON file saved at:", output_json_path)
+    return outputList
+
 
 #print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"]))
