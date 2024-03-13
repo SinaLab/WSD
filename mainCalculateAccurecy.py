@@ -222,4 +222,4 @@ def calculateAccurecy():
     return accurecy
 
 # Main 
-print(calculateAccurecy())
+#print(calculateAccurecy())
