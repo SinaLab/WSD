@@ -36,19 +36,19 @@
             "sentence_id": 4, 
             "sentence": " ضمان الوصول الملائم ", 
             "words": [
-                {"word_id": 16125, "word": "ضمان", "target_sense": 302037941},
-                {"word_id": 16126, "word": "الوصول", "target_sense": 302063446},
-                {"word_id": 16127, "word": "الملائم", "target_sense": 302055914}
+                {"word_id": 1, "word": "ضمان", "target_sense": 302037941},
+                {"word_id": 2, "word": "الوصول", "target_sense": 302063446},
+                {"word_id": 3, "word": "الملائم", "target_sense": 302055914}
             ]
         },
         {
             "sentence_id": 5, 
             "sentence": "إلى التعليم لجيل الأطفال", 
             "words": [
-                {"word_id": 16128, "word": "إلى", "target_sense": 303002297},
-                {"word_id": 16129, "word": "التعليم", "target_sense": 302015122},
-                {"word_id": 16130, "word": "لجيل", "target_sense": 303009144},
-                {"word_id": 16132, "word": "الأطفال", "target_sense": 302038763}
+                {"word_id": 1, "word": "إلى", "target_sense": 303002297},
+                {"word_id": 2, "word": "التعليم", "target_sense": 302015122},
+                {"word_id": 3, "word": "لجيل", "target_sense": 303009144},
+                {"word_id": 4, "word": "الأطفال", "target_sense": 302038763}
             ]
         }
 ]
