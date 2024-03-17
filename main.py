@@ -148,7 +148,7 @@ for glossesDictValue in glossesDictValues:
 
 # Load the JSON data
 sentencesInfo = json.loads(fileContent)
-print(sentencesInfo)
+#print(sentencesInfo)
     
 targetWord = ""
 glossesIds = [] 
